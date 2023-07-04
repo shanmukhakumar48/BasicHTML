@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title> Mini calculator</title>
+		<style>
+			.formstyle  {  
+				border: 2px solid blue;
+				padding:10px;
+				width:25%;
+				height:30%;
+				text-align:center;
+				border-radius: 5px;  
+			}  
+			#calc {  
+				width:100%;
+				height:30%;
+				font-size:180%; 
+			}  
+			input {
+				width:30%;
+				height:20%;
+				font-size:160%;
+			}
+		</style>
+		<script>
+			function plus(){
+			
+				form1.answer.value += '+'
+			}
+			function minus(){
+				form1.answer.value += '-'
+			}
+			function multiply(){
+				form1.answer.value += '*'
+			}
+			function division(){
+				form1.answer.value += '/'
+			}
+			function moduloDivision(){
+				form1.answer.value += '%'
+			}
+			function calculate() {
+				form1.answer.value = eval(form1.answer.value)
+			}
+		</script>
+	</head>  
+	<body>
+		<div class= "formstyle">  
+			<form name = "form1">
+				<input id = "calc" type ="text" name = "answer"> <br> <br>
+				<input type = "button" value = "+" onclick = "plus()">
+				<input type = "button" value = "-" onclick = "minus()">
+				<input type = "button" value = "*" onclick = "multiply()"><br/><br/> 
+				<input type = "button" value = "/" onclick = "division()">   
+				<input type = "button" value = "%" onclick = "moduloDivision()"> 
+				<input type = "button" value = "=" onclick = "calculate()"> 
+			</form>  
+		</div>  
+	</body>  
+</html>
